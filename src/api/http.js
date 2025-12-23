@@ -1,6 +1,8 @@
 import axios from "axios";
 
+const baseURL = import.meta.env.VITE_API_BASE_URL; // ej: https://xxxxx.ngrok-free.dev
+
 export const http = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
-  timeout: 10000,
+  baseURL, // <- CLAVE: absoluto, no "/api"
+  headers: { "Content-Type": "application/json" },
 });
