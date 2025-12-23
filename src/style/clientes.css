@@ -1,0 +1,19 @@
+.panelRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.panelRow .input {
+  flex: 1 1 320px;
+  min-width: 220px;
+}
+
+.panelRow .pill {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 600px) {
+  .panelRow { flex-direction: column; align-items: stretch; }
+}

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { http } from "../api/http";
-import "../style/app.css"; 
+import "../style/clientes.css";
+
 
 export default function Clientes() {
   const [clientes, setClientes] = useState([]);

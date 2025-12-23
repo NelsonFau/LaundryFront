@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import "../style/app.css";
+import "../style/layout.css";
 
 export default function Layout() {
   return (
@@ -26,6 +26,12 @@ export default function Layout() {
             </NavLink>
             <NavLink to="/remitos" className={({ isActive }) => "nav__link" + (isActive ? " is-active" : "")}>
               Remitos
+            </NavLink>
+            <NavLink
+              to="/remitos/crear"
+              className={({ isActive }) => "nav__link" + (isActive ? " is-active" : "")}
+            >
+              Crear remito
             </NavLink>
           </nav>
         </div>

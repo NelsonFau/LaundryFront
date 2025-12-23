@@ -1,0 +1,40 @@
+.remitosToolbar {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.remitosToolbar .field {
+  flex: 1 1 340px;
+  min-width: 240px;
+}
+
+.remitosRowActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.remitosPager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .remitosRowActions a.btn,
+  .remitosRowActions button.btn {
+    width: 100%;
+  }
+  .remitosPager button.btn {
+    width: 100%;
+  }
+  .remitosPager {
+    justify-content: stretch;
+  }
+}

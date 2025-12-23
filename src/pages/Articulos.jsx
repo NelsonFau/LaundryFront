@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { http } from "../api/http";
-import "../style/app.css";
+import "../style/articulos.css";
+
 
 export default function Articulos() {
   const [articulos, setArticulos] = useState([]);

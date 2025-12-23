@@ -1,0 +1,27 @@
+/* header de remitos: en móvil que quede todo prolijo */
+.pageHeader { flex-wrap: wrap; }
+
+/* botones del header */
+.actions { flex-wrap: wrap; gap: 10px; }
+
+/* cards de remitos: que nunca “salten” controles afuera */
+.cardRow > div:last-child {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .actions { width: 100%; flex-direction: column; align-items: stretch; }
+  .actions .btn, .actions .btnPrimary { width: 100%; }
+
+  .cardRow { flex-direction: column; align-items: stretch; }
+  .cardRow select.input { width: 100% !important; }
+  .cardRow button.btn { width: 100%; }
+
+  /* en el form de items (cantidad/subtotal) que baje a una columna */
+  .cardRow [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
