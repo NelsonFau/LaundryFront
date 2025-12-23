@@ -1,9 +1,10 @@
 import axios from "axios";
 
-const baseURL = import.meta.env.VITE_API_BASE_URL; // ej: https://xxxxx.ngrok-free.dev
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
+console.log("API BASE URL =>", baseURL);
 
 export const http = axios.create({
-  baseURL, // <- CLAVE: absoluto, no "/api"
+  baseURL,
   headers: { "Content-Type": "application/json" },
 });
-console.log("VITE_API_BASE_URL =", import.meta.env.VITE_API_BASE_URL);
