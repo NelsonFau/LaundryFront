@@ -6,3 +6,4 @@ export const http = axios.create({
   baseURL, // <- CLAVE: absoluto, no "/api"
   headers: { "Content-Type": "application/json" },
 });
+console.log("VITE_API_BASE_URL =", import.meta.env.VITE_API_BASE_URL);
