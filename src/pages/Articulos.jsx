@@ -27,16 +27,7 @@ export default function Articulos() {
     setMsg("");
     try {
       const { data } = await http.get("/api/Articulo");
-
-      const lista =
-        Array.isArray(data) ? data :
-        Array.isArray(data?.$values) ? data.$values :
-        Array.isArray(data?.data) ? data.data :
-        Array.isArray(data?.articulos) ? data.articulos :
-        [];
-
-      setArticulos(lista);
-
+      setArticulos(Array.isArray(data) ? data : []);
     } catch (e) {
       setError("No se pudo cargar artículos. ¿Está la API corriendo?");
     } finally {
